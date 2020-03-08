@@ -662,7 +662,10 @@ def augment_data(base_dir,augment_both, use_all_type=True):
     if splitting_up:
         print("Image augmentation by splitting up have started!")
         dataset_dirs = split_data(data_dir=dataset_dirs,augment_both=augment_both)
+        print("Image augmentation by splitting up have ended!")
         splitting_up =False
+        
+        print("123,", img_aug_dir,gt_aug_dir, rotation, flipping, correction_gamma)
 
     if not splitting_up:
         img_aug_dir = os.path.join(img_dir,'aug')
