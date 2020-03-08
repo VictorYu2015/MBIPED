@@ -678,7 +678,7 @@ def augment_data(base_dir,augment_both, use_all_type=True):
     #    print("Image augmentation by splitting up have ended!")
     splitting_up =False
         
-    #    print("123,", rotation, flipping, correction_gamma)
+    print("123,", rotation, flipping, correction_gamma)
 
     if not splitting_up:
         img_aug_dir = os.path.join(img_dir,'aug')
