@@ -419,6 +419,9 @@ def split_data(data_dir,augment_both=True):
         else:
             print('saved image: ', x_list[i])
 
+    print('...splitting up augmentation done! img_dir, ', img_dir, gt_dir)
+    if augment_both and gt_dir is not None:
+        gt_aug_dir = os.path.join(gt_dir,'aug')
     print('...splitting up augmentation done! gt_aug_dir, ', gt_aug_dir)
     print('...splitting up augmentation done! img_aug_dir, ', img_aug_dir)
     print('...splitting up augmentation done! augment_both, ', augment_both)
