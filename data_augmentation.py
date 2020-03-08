@@ -419,7 +419,9 @@ def split_data(data_dir,augment_both=True):
         else:
             print('saved image: ', x_list[i])
 
-    print('...splitting up augmentation done!')
+    print('...splitting up augmentation done! gt_aug_dir, ', gt_aug_dir)
+    print('...splitting up augmentation done! img_aug_dir, ', img_aug_dir)
+    print('...splitting up augmentation done! augment_both, ', augment_both)
 
     if augment_both:
         print('data saved in: ', os.listdir(gt_aug_dir), 'and in',os.listdir(img_aug_dir))
