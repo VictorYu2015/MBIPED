@@ -378,6 +378,19 @@ def split_data(data_dir,augment_both=True):
         gt_list.sort()
         n = len(gt_list) if len(x_list) == len(gt_list) else 0
 
+    print('123,')
+    print(img_dir)
+    print('...splitting up augmentation done! img_dir, ', img_dir)
+    print('...splitting up augmentation done! gt_dir, ', gt_dir)
+    print('456,')
+    print(img_dir)
+    print('...splitting up augmentation done! img_dir, ', img_dir)
+    print('...splitting up augmentation done! gt_dir, ', gt_dir)
+    print('789,')
+    print(img_dir)
+    print('...splitting up augmentation done! img_dir, ', img_dir)
+    print('...splitting up augmentation done! gt_dir, ', gt_dir)
+
     # real folder copy to aug dir
     shutil.copytree(os.path.join(img_dir, 'real'),img_aug_dir+'/real')
     if augment_both:
@@ -422,9 +435,7 @@ def split_data(data_dir,augment_both=True):
     print('123,')
     print(img_dir)
     print('...splitting up augmentation done! img_dir, ', img_dir)
-    if augment_both and gt_dir is not None:
-        gt_aug_dir = os.path.join(gt_dir,'aug')
-    print('...splitting up augmentation done! gt_aug_dir, ', gt_aug_dir)
+    print('...splitting up augmentation done! gt_dir, ', gt_dir)
     print('...splitting up augmentation done! img_aug_dir, ', img_aug_dir)
     print('...splitting up augmentation done! augment_both, ', augment_both)
 
