@@ -9,7 +9,7 @@ import imutils
 
 def cv_imshow(img,title='image'):
     print(img.shape)
-    # cv.imshow(title,img)
+    cv.imshow(title,img)
     cv.waitKey(250)
     cv.destroyAllWindows()
 
@@ -502,7 +502,7 @@ def rotate_data(data_dir, augment_both=True):
                 if augment_both and rot_gt is not None:
                     cv.imwrite(os.path.join(current_GT_dir, gt_aug_list[j]), rot_gt)
                     tmp_imgs = np.concatenate((rot_x, rot_gt), axis=1)
-                # cv.imshow('Rotate Data', tmp_imgs)
+                cv.imshow('Rotate Data', tmp_imgs)
                 cv.waitKey(300)
 
             print("rotation with {} degrees fullfiled folder: {} ".format(i, folder_name))
@@ -551,7 +551,7 @@ def flip_data(data_dir, augment_both=True):
                 cv.imwrite(os.path.join(save_dir_gt, GT_list[j]), flip_gt)
                 tmp_imgs = np.concatenate((flip_x, flip_gt), axis=1)
 
-            # cv.imshow('Flipping data',tmp_imgs)
+            cv.imshow('Flipping data',tmp_imgs)
             cv.waitKey(300)
 
         print("End flipping file in {}".format(os.path.join(X_dir, i)))
@@ -617,7 +617,7 @@ def gamma_data(data_dir,augment_both=True, in_gt=False):
                 tmp_imgs1 = np.concatenate((gam30_x, gt_tmp), axis=1)
                 tmp_imgs2 = np.concatenate((gam60_x, gt_tmp), axis=1)
                 tmp_imgs = np.concatenate((tmp_imgs2, tmp_imgs1), axis=0)
-            # cv.imshow('gramma correction',tmp_imgs)
+            cv.imshow('gramma correction',tmp_imgs)
             cv.waitKey(300)
 
         print("End gamma correction, file in {}".format(os.path.join(X_dir, i)))
