@@ -6,6 +6,8 @@ import cv2 as cv
 import shutil
 import imutils
 
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 def cv_imshow(img,title='image'):
     print(img.shape)
