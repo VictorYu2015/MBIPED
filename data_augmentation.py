@@ -362,6 +362,7 @@ def split_data(data_dir,augment_both=True):
     # split data and copy real image to aug dir
     img_dir = data_dir[0]
     gt_dir = data_dir[1]
+
     img_aug_dir= os.path.join(img_dir,'aug')
     _=make_dirs(img_aug_dir)
     if augment_both and gt_dir is not None:
@@ -377,19 +378,6 @@ def split_data(data_dir,augment_both=True):
         gt_list = os.listdir(os.path.join(gt_dir, 'real'))
         gt_list.sort()
         n = len(gt_list) if len(x_list) == len(gt_list) else 0
-
-    print('123,')
-    print(img_dir)
-    print('...splitting up augmentation done! img_dir, ', img_dir)
-    print('...splitting up augmentation done! gt_dir, ', gt_dir)
-    print('456,')
-    print(img_dir)
-    print('...splitting up augmentation done! img_dir, ', img_dir)
-    print('...splitting up augmentation done! gt_dir, ', gt_dir)
-    print('789,')
-    print(img_dir)
-    print('...splitting up augmentation done! img_dir, ', img_dir)
-    print('...splitting up augmentation done! gt_dir, ', gt_dir)
 
     # real folder copy to aug dir
     shutil.copytree(os.path.join(img_dir, 'real'),img_aug_dir+'/real')
@@ -433,7 +421,7 @@ def split_data(data_dir,augment_both=True):
             print('saved image: ', x_list[i])
 
     print('123,')
-    print(img_dir)
+    print('456,')
     print('...splitting up augmentation done! img_dir, ', img_dir)
     print('...splitting up augmentation done! gt_dir, ', gt_dir)
     print('...splitting up augmentation done! img_aug_dir, ', img_aug_dir)
