@@ -361,18 +361,12 @@ def rotated_img_extractor(x=None, gt=None,img_width=None, img_height=None,i=None
 def split_data(data_dir,augment_both=True):
     # split data and copy real image to aug dir
     img_dir = data_dir[0]
-    print('123,')
-    print(img_dir)
     gt_dir = data_dir[1]
-    print('456,')
-    print(gt_dir)
     img_aug_dir= os.path.join(img_dir,'aug')
     _=make_dirs(img_aug_dir)
     if augment_both and gt_dir is not None:
         gt_aug_dir = os.path.join(gt_dir,'aug')
         _ = make_dirs(gt_aug_dir)
-        print('789,')
-        print(gt_aug_dir)
     elif not augment_both and gt_dir is not None:
         raise NotImplementedError('In single augmentation')
 
